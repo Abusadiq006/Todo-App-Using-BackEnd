@@ -1,0 +1,48 @@
+### GET /
+GET http://localhost:5000
+
+### Register a user PORT /AUTH/REGISTER
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "abusadiq@gmail.com",
+    "password": "12345678"
+}
+
+### Login a user PORT /AUTH/LOGIN
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "abusadiq@gmail.com",
+    "password": "12345678"
+}
+
+### Fetch all todos GET / TODOS (proteced)
+GET http://localhost:5000/todos
+Authorization: 
+
+### Create a new todo POST / TODOS (protected)
+POST http://localhost:5000/todos
+Authorization: 
+
+Content-Type: application/json
+
+{
+    "task": "Finish coding the projects"
+}
+
+### Update a todo PUT / TODOS/:ID (protected)
+PUT http://localhost:5000/todos/2?page=4
+Authorization: 
+
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### Delete a todo DELETE /TODOS/:ID (protected)
+DELETE http://localhost:5000/todos/2
+Authorization: 
